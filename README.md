@@ -1,5 +1,3 @@
-# aerofoil-cfd-analysis
-CFD analysis of NACA 0012, 2412 and 4412 aerofoils in Ansys Fluent — lift and drag coefficients across 0°–12° AoA, validated against thin aerofoil theory.
 # NACA Aerofoil Aerodynamic Analysis — Ansys Fluent CFD
 
 An independent CFD study comparing the aerodynamic performance of three NACA aerofoil profiles across a range of angles of attack, conducted in Ansys Fluent 2026 R1 as part of a first-year Aerospace Engineering portfolio.
@@ -13,29 +11,16 @@ Three aerofoils were analysed — NACA 0012 (symmetric), NACA 2412 (low camber),
 ```
 aerofoil-cfd-analysis/
 │
-├── geometry/
+├── Geometry/
 │   ├── NACA0012.txt          # Aerofoil coordinates (cosine-spaced)
 │   ├── NACA2412.txt
 │   └── NACA4412.txt
 │
-├── results/
-│   ├── NACA0012/
-│   │   ├── velocity_contour.png
-│   │   └── pressure_contour.png
-│   ├── NACA2412/
-│   │   ├── velocity_contour.png
-│   │   └── pressure_contour.png
-│   └── NACA4412/
-│       ├── velocity_contour.png
-│       └── pressure_contour.png
-│
-├── plots/
+├── Plots/
 │   └── NACA_CL_CD_comparison.png
 │
-├── validation/
-│   └── aerofoil_validation_plot.py
-│
-└── README.md
+└── Validation/
+    └── aerofoil_validation_plot.py
 ```
 
 ---
@@ -146,29 +131,7 @@ Drag direction:  ( cos α,  sin α, 0)
 
 ### CL and CD vs Angle of Attack
 
-![CL CD Comparison](plots/NACA_CL_CD_comparison.png)
-
-### Pressure and Velocity Contours
-
-#### NACA 0012
-
-**Velocity contour** — peak velocity at leading edge stagnation point, symmetric acceleration over upper and lower surfaces at 0° AoA.
-
-![NACA 0012 Velocity](results/NACA0012/velocity_contour.png)
-
-**Pressure contour** — high stagnation pressure at leading edge, symmetric low-pressure regions confirming zero net lift at 0° AoA.
-
-![NACA 0012 Pressure](results/NACA0012/pressure_contour.png)
-
-#### NACA 4412
-
-**Velocity contour** — higher velocity over the upper surface compared to lower, consistent with positive lift generation at 0° AoA due to camber.
-
-![NACA 4412 Velocity](results/NACA4412/velocity_contour.png)
-
-**Pressure contour** — strong low-pressure region on the upper surface even at 0° AoA, confirming the lift advantage of the cambered profile.
-
-![NACA 4412 Pressure](results/NACA4412/pressure_contour.png)
+![CL CD Comparison](Plots/NACA_CL_CD_comparison.png)
 
 ---
 
@@ -193,8 +156,6 @@ The cambered aerofoils (2412, 4412) confirm the expected positive zero-lift CL: 
 
 ## Key Observations
 
-The results confirm three fundamental aerodynamic principles:
-
 **1. Camber increases lift at every AoA.** At 6°, NACA 4412 achieves CL = 1.08 versus CL = 0.634 for NACA 0012 — a 70% increase in lift for the same incidence, entirely attributable to camber.
 
 **2. Camber shifts the zero-lift angle.** NACA 0012 produces zero lift at 0° AoA; NACA 4412 produces CL = 0.437 at 0° AoA, with zero lift occurring at approximately −4°, consistent with thin aerofoil theory.
@@ -206,7 +167,7 @@ The results confirm three fundamental aerodynamic principles:
 ## What I Learned
 
 - Setting up and running external aerodynamic CFD simulations in Ansys Fluent using the k-ω SST turbulence model
-- Constructing structured inflation meshes for accurate boundary layer resolution
+- Constructing inflation meshes for accurate boundary layer resolution
 - Defining correct lift and drag force vectors as a function of angle of attack
 - Extracting and post-processing aerodynamic coefficients from CFD results
 - Validating computational results against analytical thin aerofoil theory
