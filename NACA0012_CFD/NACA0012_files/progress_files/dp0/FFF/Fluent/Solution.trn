@@ -1,0 +1,118 @@
+Transcript Start Time:  16:20:54, 06 Jul 2026 GMT Daylight Time 
+Current Directory: "C:\Users\alt4m\Desktop\Projects\aerofoil analisys\NACA0012"
+
+Build Time: Feb  2 2026 16:37:12 EST 
+Executable Path: C:/PROGRA~1/ANSYS Inc/ANSYS Student/v261/fluent/ntbin/win64/fluent.exe
+
+----------------------------------------------------------------------------------
+ID    Hostname  Core  O.S.         PID    CPU Model Name                         
+----------------------------------------------------------------------------------
+n0*   Altamish  1/16  Windows-x64  14216  13th Gen Intel(R) Core(TM) i5-13400    
+host  Altamish        Windows-x64  12140  13th Gen Intel(R) Core(TM) i5-13400    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+----------------------------------------------------------------------------------
+
+Cortex Process ID: 20156 
+License Server Path: () 
+Reading "C:\Users\alt4m\Desktop\Projects\aerofoil analisys\NACA0012\NACA0012_files\dp0\FFF\MECH\FFF.1.msh"...
+Buffering for file scan...
+
+   40048 nodes, binary.
+    1089 nodes, binary.
+   90635 2D interior faces, zone  1, binary.
+      54 2D velocity-inlet faces, zone  5, binary.
+      15 2D pressure-outlet faces, zone  6, binary.
+    1020 2D wall faces, zone  7, binary.
+   50587 mixed cells, zone  2, binary.
+
+Building...
+     mesh
+     materials,
+     interface,
+     domains,
+     zones,
+	airfoil
+	outlet
+	inlet
+	fff_surface
+	interior-fff_surface
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+
+Writing Settings file "C:\Users\alt4m\Desktop\Projects\aerofoil analisys\NACA0012\NACA0012_files\dp0\FFF\Fluent\FFF.1.set"...
+	writing rp variables ... Done.
+	writing domain variables ... Done.
+	writing fff_surface (type fluid) (mixture) ... Done.
+	writing interior-fff_surface (type interior) (mixture) ... Done.
+	writing inlet (type velocity-inlet) (mixture) ... Done.
+	writing outlet (type pressure-outlet) (mixture) ... Done.
+	writing airfoil (type wall) (mixture) ... Done.
+	writing zones map name-id ... Done.
+"Updating Setup cell..."
+"Updating Solution cell..."
+Initialization based on settings...
+
+Initialize using the hybrid initialization method.
+
+Checking case topology... 
+-This case has both inlets & outlets 
+-Pressure information is not available at the boundaries.
+ Case will be initialized with constant pressure
+
+	iter		scalar-0
+
+	1		0.000000e+00
+	2		0.000000e+00
+	3		0.000000e+00
+	4		0.000000e+00
+	5		0.000000e+00
+	6		0.000000e+00
+	7		0.000000e+00
+	8		0.000000e+00
+	9		0.000000e+00
+	10		0.000000e+00
+
+Hybrid initialization is done.
+Writing data to C:\\Users\\alt4m\\Desktop\\Projects\\aerofoil analisys\\NACA0012\\NACA0012_files\\dp0\\FFF\\Fluent\\FFF.1.ip ...
+	x-coord
+	y-coord
+	pressure
+	x-velocity
+	y-velocity
+	k
+	omega
+	hyb_init-0
+	hyb_init-1
+Done.
+("Unable to update solution. Number of iterations should be greater than zero.")
+
+Error: Unable to update solution. Number of iterations should be greater than zero.
+Error Object: #f
+
+Performance Timer for 0 iterations on 1 compute node
+  Average wall-clock time per iteration:                0.000 sec
+  Global reductions per iteration:                          0 ops
+  Global reductions time per iteration:                 0.000 sec (0.0%)
+  Message count per iteration:                              0 messages
+  Data transfer per iteration:                          0.000 MB
+  LE solves per iteration:                                  0 solves
+  LE wall-clock time per iteration:                     0.000 sec (0.0%)
+  LE global solves per iteration:                           0 solves
+  LE global wall-clock time per iteration:              0.000 sec (0.0%)
+  LE global matrix maximum size:                            0
+  AMG cycles per iteration:                             0.000 cycles
+  Relaxation sweeps per iteration:                          0 sweeps
+  Relaxation exchanges per iteration:                       0 exchanges
+  LE early protections (stall) per iteration:           0.000 times
+  LE early protections (divergence) per iteration:      0.000 times
+  Total SVARS touched:                                    394
+
+  Total wall-clock time:                                0.000 sec
+
+Transcript Stop Time:  16:21:13, 06 Jul 2026 GMT Daylight Time 
+Total Transcript Time: 0 Minute 18 Second.
